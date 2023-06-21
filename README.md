@@ -1,6 +1,6 @@
 # Coderz
 
-Task:
+# Task:
 
 
 Java Task  :
@@ -23,66 +23,78 @@ Password: <String>
 Return a JWT that will expire in 30 min with username claim
 
  
-Solution:
-GitHub link: https://github.com/islam-365/Coderz
+# Solution
 
 First, we will start to create the entity for each of the Data and User
  
- 
-
-
+ ![image](https://github.com/islam-365/Coderz/assets/85651011/bf5ddb0c-ec14-4c5b-adc4-8c717e588d7b)
+![image](https://github.com/islam-365/Coderz/assets/85651011/4b2dceaa-894f-468c-974e-716873ec065f)
 
 
 Then, we will create the Repository, Service and Controller for each of them.
 
- 
- 
- 
+ ![image](https://github.com/islam-365/Coderz/assets/85651011/4d5af80d-99b4-4d47-b897-64d31bb0a718)
+
+ ![image](https://github.com/islam-365/Coderz/assets/85651011/8291bd75-c5cb-43d9-b98a-6dd4e5268dbe)
+
+ ![image](https://github.com/islam-365/Coderz/assets/85651011/8475ce78-cc2b-4fc6-8db5-40dfd97a2842)
+
 
 The task says that we need only a create method for the Data
- 
+ ![image](https://github.com/islam-365/Coderz/assets/85651011/29e45fcc-7a7f-4ad1-bb52-df1171a61fbb)
+
 No one can use the method unless he have a valid JWT token, so we need to set some security configurations
- 
+ ![image](https://github.com/islam-365/Coderz/assets/85651011/aad49456-1f26-4b26-9540-35d8fdb47861)
+
 
 In the SecurityConstants file, we will set up the time for the token to expire after 30 min
- 
+ ![image](https://github.com/islam-365/Coderz/assets/85651011/f13581d9-9305-4c75-b88c-46d4026c3858)
+
 
 I will be using the H2 database for the purpose of demonstration.
   
+![image](https://github.com/islam-365/Coderz/assets/85651011/41641a70-8efe-43df-a278-cbeb63ed3f6d)
 
 
 Test the application: 
 
 Now to test the application, we will run some request with Postman.
 First, we will run the Application
- 
+ ![image](https://github.com/islam-365/Coderz/assets/85651011/952d4cf2-ba6b-4332-9c0f-052e4f5451c6)
+
 
 Requests:
 
 1- Create User
 We can see in the first pic that the request is successful and it give us a 201 created code
  
+![image](https://github.com/islam-365/Coderz/assets/85651011/6e56bf11-3af9-4953-b183-adb1e8610f12)
 
 
 We can also see that the user data is uploaded to the database
  
+![image](https://github.com/islam-365/Coderz/assets/85651011/52bc4ee2-09ae-4cc7-9f1d-a50dd0d721e2)
 
 2- Authenticate User
 
 By authenticate user, we can get the token so we can use it to create the Data we need
  
+![image](https://github.com/islam-365/Coderz/assets/85651011/fa09f31b-65bc-4374-aab9-4dd4e71ed462)
 
  
 3- Creating Data
 
 Using the token we got from the authentication, now we can create Data wit it.
 First we will set up the token
- 
+ ![image](https://github.com/islam-365/Coderz/assets/85651011/865428d2-e2d9-4bc7-9b1c-18a3a1b16667)
+
 And now we can make some requests
- 
+ ![image](https://github.com/islam-365/Coderz/assets/85651011/e04ca1e4-fa1a-4a57-8c98-2ef7447aecd6)
+
 
 
 
 
 
 And we can check the data from the database
+![image](https://github.com/islam-365/Coderz/assets/85651011/c5bf4866-382b-4deb-a054-8039076957b9)
